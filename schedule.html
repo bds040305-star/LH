@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 일정</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="mobile-app">
+    <header class="page-title-header">
+        <a href="index.html" class="back-button">‹</a>
+        <h1>내 일정</h1>
+    </header>
+
+    <main>
+        <section class="calendar-box">
+            <div class="calendar-title" id="calendar-title">2026년 9월</div>
+
+            <div class="calendar-control">
+                <button type="button" class="text-button" id="calendar-prev" aria-label="이전 주">‹</button>
+                <button type="button" class="text-button" id="calendar-next" aria-label="다음 주">›</button>
+            </div>
+
+            <div class="calendar-week">
+                <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+            </div>
+
+            <div class="calendar-days" id="calendar-days">
+                <button type="button" data-date="14">14</button><button type="button" data-date="15">15</button><button type="button" class="calendar-today" data-date="16">16</button><button type="button" data-date="17">17</button><button type="button" data-date="18">18</button><button type="button" data-date="19">19</button><button type="button" data-date="20">20</button>
+            </div>
+        </section>
+
+        <p class="schedule-date" id="schedule-date">9월 16일 일정</p>
+
+        <div id="schedule-list">
+        <article class="schedule-card">
+            <span class="media-slot icon-slot"></span>
+            <div>
+                <strong>가족관계증명서 서명</strong>
+                <p>가족 서명 요청 확인</p>
+            </div>
+        </article>
+
+        <article class="schedule-card">
+            <span class="media-slot icon-slot"></span>
+            <div>
+                <strong>주민등록등본 준비</strong>
+                <p>본인 제출</p>
+            </div>
+        </article>
+
+        <article class="schedule-card warning">
+            <span class="media-slot icon-slot"></span>
+            <div>
+                <strong style="color:#F28A16;">접수 마감 D-2</strong>
+                <p>서울 강서구 행복주택</p>
+            </div>
+        </article>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+</div>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+
+</body>
+</html>

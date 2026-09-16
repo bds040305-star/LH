@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맞춤 조건 설정</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="mobile-app">
+    <header class="page-title-header">
+        <a href="index.html" class="back-button">‹</a>
+        <h1>맞춤 조건 설정</h1>
+        <button type="button" class="header-side text-button" id="reset-button">초기화 ›</button>
+    </header>
+
+    <main class="conditions-content">
+        <section class="conditions-intro">
+            <p>나에게 맞는 공고만<br><strong>골라볼게요</strong></p>
+            <small>조건은 나중에 언제든 바꿀 수 있어요.</small>
+        </section>
+
+        <div class="progress-wrap">
+            <div class="progress-track">
+                <div class="progress-fill" id="condition-progress-fill"></div>
+            </div>
+            <div class="progress-text">
+                <strong id="progress-number">1 / 4</strong>
+                <span id="progress-description">조건 4개 중 1개 설정</span>
+            </div>
+        </div>
+
+        <section class="condition-section">
+            <h2>지역</h2>
+            <div class="condition-line"></div>
+            <button type="button" class="region-select" id="region-select">
+                <span id="selected-region">지역을 선택해 주세요</span>
+                <span>⌄</span>
+            </button>
+        </section>
+
+        <section class="condition-section">
+            <h2>임대 유형</h2>
+            <div class="chip-group" id="rent-type-group">
+                <button type="button" class="chip active">전세임대</button>
+                <button type="button" class="chip">매입 임대</button>
+                <button type="button" class="chip">분양</button>
+            </div>
+        </section>
+
+        <section class="condition-section">
+            <h2>세대 구성</h2>
+            <div class="chip-group" id="household-group">
+                <button type="button" class="chip">한부모 가정</button>
+                <button type="button" class="chip">청년 1인</button>
+                <button type="button" class="chip">신혼부부</button>
+            </div>
+        </section>
+
+        <section class="condition-section">
+            <div class="income-title">
+                <h2>소득분위</h2>
+                <span>ⓘ</span>
+            </div>
+            <div class="income-row">
+                <span>모름 자동 확인하기</span>
+                <button type="button" class="toggle" id="income-toggle" aria-pressed="false"></button>
+            </div>
+        </section>
+
+        <a href="custom-list.html" class="primary-button" style="margin-top:30px;">조건 저장하고 공고 보기</a>
+    </main>
+
+    <div id="footer"></div>
+
+    <div class="modal-overlay" id="region-modal">
+        <div class="bottom-sheet">
+            <div class="drag-handle"></div>
+            <div class="sheet-header">
+                <div>
+                    <span class="eyebrow">지역 선택</span>
+                    <h2>어디의 공고를 볼까요?</h2>
+                </div>
+                <button type="button" class="sheet-close" data-modal-close>×</button>
+            </div>
+
+            <div class="region-list">
+                <button type="button" class="region-option" data-region="전국"><span class="media-slot icon-slot"></span>전국</button>
+                <button type="button" class="region-option" data-region="서울특별시"><span class="media-slot icon-slot"></span>서울특별시</button>
+                <button type="button" class="region-option" data-region="경기도"><span class="media-slot icon-slot"></span>경기도</button>
+                <button type="button" class="region-option" data-region="인천광역시"><span class="media-slot icon-slot"></span>인천광역시</button>
+                <button type="button" class="region-option" data-region="부산광역시"><span class="media-slot icon-slot"></span>부산광역시</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+
+</body>
+</html>

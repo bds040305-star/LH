@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맞춤 공고 리스트</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="mobile-app">
+    <header class="page-title-header">
+        <a href="index.html" class="back-button">‹</a>
+        <h1>맞춤 공고 리스트</h1>
+        <a href="custom-conditions.html" class="header-side">조건 변경 ›</a>
+    </header>
+
+    <section class="notice-list-top">
+        <div class="notice-summary">
+            <div>
+                <span class="eyebrow">내 조건에 맞는 공고</span>
+                <h2>지금 확인해 볼까요?</h2>
+            </div>
+            <div class="notice-count">3<small>건</small></div>
+        </div>
+
+        <div class="filter-row">
+            <button class="filter-chip" data-condition="region">서울특별시</button>
+            <button class="filter-chip" data-condition="rent">전세임대</button>
+            <button class="filter-chip" data-condition="household">신혼부부</button>
+            <button class="filter-chip"><span class="media-slot icon-slot"></span></button>
+        </div>
+    </section>
+
+    <main class="notice-list">
+        <a href="notice-detail.html">
+            <article class="notice-card">
+                <div class="notice-card-head">
+                    <span class="status-badge">신청 가능</span>
+                    <button type="button" class="bookmark-button" aria-pressed="false">
+                        <span class="media-slot icon-slot"></span>
+                    </button>
+                </div>
+                <p class="notice-type">국민임대</p>
+                <h3>서울 강서구 행복주택 예비입주자 모집</h3>
+                <div class="notice-card-footer">
+                    <span class="media-slot icon-slot"></span>
+                    접수 마감 2026.09.18까지
+                    <span class="right-arrow">›</span>
+                </div>
+            </article>
+        </a>
+
+        <a href="notice-detail.html">
+            <article class="notice-card">
+                <div class="notice-card-head">
+                    <span class="status-badge">신청 가능</span>
+                    <button type="button" class="bookmark-button" aria-pressed="false">
+                        <span class="media-slot icon-slot"></span>
+                    </button>
+                </div>
+                <p class="notice-type">매입임대</p>
+                <h3>수원시 청년 매입임대 예비입주자</h3>
+                <div class="notice-card-footer">
+                    <span class="media-slot icon-slot"></span>
+                    접수 마감 2026.09.22까지
+                    <span class="right-arrow">›</span>
+                </div>
+            </article>
+        </a>
+
+        <a href="notice-detail.html">
+            <article class="notice-card">
+                <div class="notice-card-head">
+                    <span class="status-badge warning">마감 임박</span>
+                    <button type="button" class="bookmark-button" aria-pressed="false">
+                        <span class="media-slot icon-slot"></span>
+                    </button>
+                </div>
+                <p class="notice-type">공공분양</p>
+                <h3>청년 특별공급 입주자 모집</h3>
+                <div class="notice-card-footer">
+                    <span class="media-slot icon-slot"></span>
+                    접수 마감 2026.09.16까지
+                    <span class="right-arrow">›</span>
+                </div>
+            </article>
+        </a>
+    </main>
+
+    <div id="footer"></div>
+</div>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+
+</body>
+</html>

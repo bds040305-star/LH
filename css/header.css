@@ -1,0 +1,25 @@
+
+.app-header {
+    width: 390px;
+    height: 64px;
+    padding: 0 19px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+}
+.header-home-link { display:flex; align-items:center; }
+.header-home-link img { display:block; width:112px; height:auto; }
+.header-icons { display:flex; align-items:center; gap:18px; }
+.header-icon-button {
+    width:26px; height:26px; padding:0; border:0; background:transparent;
+}
+.header-icon-button img { display:block; width:100%; height:100%; object-fit:contain; }
+.header-action-sheet { padding-bottom:34px; }
+.header-search-box { display:block; margin:24px 0 12px; }
+.header-search-box input { width:100%; height:48px; padding:0 15px; border:1px solid #d9dfe4; border-radius:10px; outline:none; font-size:13px; }
+.header-search-box input:focus { border-color:#0066B3; box-shadow:0 0 0 3px rgba(0,102,179,.1); }
+.consult-card { margin:24px 0 16px; padding:18px; border-radius:14px; background:#F4F8FC; }
+.consult-card strong { color:#0066B3; font-size:16px; }
+.consult-card p { margin:9px 0 0; color:#666; font-size:12px; line-height:1.65; }
+@media (max-width:390px) { .app-header { width:100%; } }

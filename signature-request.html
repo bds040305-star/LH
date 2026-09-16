@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가족 서명 요청</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="mobile-app">
+    <header class="page-title-header">
+        <a href="document-checklist.html" class="back-button" aria-label="서류 체크리스트로 돌아가기">‹</a>
+        <h1>가족 서명 요청</h1>
+    </header>
+
+    <main class="signature-content">
+        <span class="signature-pill">서명 요청서</span>
+        <h1>가족관계 확인을 위한</h1>
+        <h2>서명을 부탁드려요</h2>
+        <p class="sub">아래 내용을 확인한 뒤 서명란에 직접 서명해 주세요.</p>
+
+        <section class="signature-preview">
+            변다솜 님의 LH 청약 신청
+        </section>
+
+        <div class="signature-heading">
+            <h3>서명하기</h3>
+            <button type="button" class="signature-clear" id="signature-clear">다시 쓰기</button>
+        </div>
+        <div class="signature-pad" id="signature-pad" aria-label="서명 입력 영역"></div>
+        <p class="signature-note">입력한 서명은 본 신청의 가족관계 확인 용도로만 사용돼요.</p>
+
+        <button type="button" class="primary-button" id="signature-complete">서명 완료</button>
+        <p class="signature-feedback" id="signature-feedback" role="status" aria-live="polite"></p>
+    </main>
+
+    <div id="footer"></div>
+</div>
+
+<script src="./js/app.js"></script>
+<script src="./js/footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+.app-footer {
+    width: 390px;
+    height: 119px;
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    background: #fff;
+}
+
+
+/* 회사 정보 영역 */
+.footer-info {
+    position: relative;
+
+    width: 390px;
+    height: 119px;
+
+    background: #eef5fc;
+}
+
+.footer-slogan-placeholder {
+    position: absolute;
+    top: 25px;
+    left: 23px;
+}
+
+.footer-slogan-placeholder img {
+    display: block;
+    width: 172px;
+    height: auto;
+}
+
+.footer-logo-placeholder {
+    position: absolute;
+    top: 30px;
+    right: 24px;
+}
+
+.footer-logo-placeholder img {
+    display: block;
+    width: 128px;
+    height: auto;
+}
+
+.footer-links {
+    position: absolute;
+    bottom: 28px;
+    left: 23px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    white-space: nowrap;
+}
+
+.footer-links .address {
+    color: #171717;
+    font-size: 8px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.footer-links a {
+    color: #0066b3;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 12px;
+    left: 23px;
+
+    margin: 0;
+
+    color: #a0a0a0;
+    font-size: 6px;
+    line-height: 1;
+}
+
+
+/* 하단 메뉴 전체 */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+
+    z-index: 1000;
+
+    width: 390px;
+    height: 80px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0;
+    margin: 0;
+
+    background: rgba(255, 255, 255, 0.96);
+    border-top: 1px solid #eaeaea;
+
+    transform: translateX(-50%);
+    backdrop-filter: blur(14px);
+}
+
+
+/* 각각의 메뉴 */
+.nav-item {
+    width: 20%;
+    height: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    color: #a7a7a7;
+    text-decoration: none;
+}
+
+
+/* 아이콘 영역 */
+.nav-slot {
+    width: 24px !important;
+    height: 24px !important;
+
+    display: grid !important;
+    place-items: center;
+
+    flex: 0 0 24px;
+}
+
+
+/* 아이콘 기본 상태 */
+.nav-slot img {
+    display: block;
+
+    width: 24px;
+    height: 24px;
+
+    object-fit: contain;
+
+    filter:
+        brightness(0) saturate(100%) invert(72%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(94%) contrast(88%);
+
+    transition: filter 0.2s ease;
+}
+
+
+/* 메뉴 이름 */
+.nav-item>span:last-child {
+    display: block;
+
+    color: #a7a7a7;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1;
+
+    transition: color 0.2s ease;
+}
+
+
+/* 선택된 아이콘 */
+.nav-item.active .nav-slot img {
+    filter:
+        brightness(0) saturate(100%) invert(25%) sepia(86%) saturate(1749%) hue-rotate(176deg) brightness(84%) contrast(101%);
+}
+
+
+/* 선택된 메뉴 이름 */
+.nav-item.active>span:last-child {
+    color: #0055a2;
+    font-weight: 700;
+}
+
+
+@media (max-width: 390px) {
+
+    .app-footer,
+    .footer-info,
+    .bottom-nav {
+        width: 100%;
+    }
+}
+
+/* 홈 */
+.nav-item[data-page="index"] img {
+    width: 23px;
+    height: 23px;
+}
+
+/* 맞춤공고 */
+.nav-item[data-page="custom-list"] img {
+    width: 26px;
+    height: 23px;
+}
+
+/* 내 일정 */
+.nav-item[data-page="schedule"] img {
+    width: 23px;
+    height: 23px;
+}
+
+/* 부동산 맵 */
+.nav-item[data-page="estate-map"] img {
+    width: 27px;
+    height: 22px;
+}
+
+/* MY */
+.nav-item[data-page="application-status"] img {
+    width: 23px;
+    height: 23px;
+}

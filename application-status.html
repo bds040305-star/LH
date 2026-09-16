@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신청 현황</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="mobile-app">
+    <header class="page-title-header">
+        <a href="index.html" class="back-button">‹</a>
+        <h1>신청 현황</h1>
+    </header>
+
+    <main>
+        <section class="application-card">
+            <span class="eyebrow">내 신청</span>
+            <span class="status-badge" style="float:right;min-height:20px;font-size:7px;">진행 중</span>
+            <p class="application-sub">수시형 청년 매입임대</p>
+            <h2>서류 심사 중</h2>
+
+            <div class="application-stepbar">
+                <span class="done"></span>
+                <span class="done"></span>
+                <span></span>
+            </div>
+
+            <div class="application-stepnames">
+                <span class="active">서류 제출</span>
+                <span class="active">심사 중</span>
+                <span>결과 발표</span>
+            </div>
+        </section>
+
+        <h2 class="file-title">제출 서류함</h2>
+
+        <div class="file-box">
+            <span class="media-slot icon-slot"></span>
+            가족관계증명서.pdf
+            <span class="download"><img src="./images/icon/down-arrow.svg" alt=""></span>
+        </div>
+
+        <div class="application-alert">
+            <strong>심사 결과가 나오면 알려드릴게요</strong>
+            <small>알림 설정됨</small>
+        </div>
+
+        <div style="padding:0 16px 24px;">
+            <a href="signature-request.html" class="primary-button" id="signature-status-link">가족 서명 요청 확인</a>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+</div>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+
+</body>
+</html>
