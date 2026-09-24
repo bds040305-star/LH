@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{let s;try{s=JSON.parse(localStorage.getItem('lh-portfolio-family-signature-v2')||'null')}catch(_){}let a=document.getElementById('signature-status-link');if(a&&s?.signed)a.textContent='가족 서명 완료 · 상세 보기';});

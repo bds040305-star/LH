@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>가족 서명 요청</title>
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LH 청약플러스 | 가족 서명 요청</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mockup-screen.css">
 </head>
 <body>
 <div class="mobile-app">
-    <header class="page-title-header">
-        <a href="document-checklist.html" class="back-button" aria-label="서류 체크리스트로 돌아가기">‹</a>
-        <h1>가족 서명 요청</h1>
-    </header>
-
-    <main class="signature-content">
-        <span class="signature-pill">서명 요청서</span>
-        <h1>가족관계 확인을 위한</h1>
-        <h2>서명을 부탁드려요</h2>
-        <p class="sub">아래 내용을 확인한 뒤 서명란에 직접 서명해 주세요.</p>
-
-        <section class="signature-preview">
-            변다솜 님의 LH 청약 신청
-        </section>
-
-        <div class="signature-heading">
-            <h3>서명하기</h3>
-            <button type="button" class="signature-clear" id="signature-clear">다시 쓰기</button>
-        </div>
-        <div class="signature-pad" id="signature-pad" aria-label="서명 입력 영역"></div>
-        <p class="signature-note">입력한 서명은 본 신청의 가족관계 확인 용도로만 사용돼요.</p>
-
-        <button type="button" class="primary-button" id="signature-complete">서명 완료</button>
-        <p class="signature-feedback" id="signature-feedback" role="status" aria-live="polite"></p>
-    </main>
-
-    <div id="footer"></div>
+  <header class="page-title-header">
+    <a class="back-button" href="document-checklist.html" aria-label="서류 준비로 돌아가기">‹</a>
+    <h1>가족 서명 요청</h1>
+  </header>
+  <main class="mock-main mock-family" data-mock-page="family">
+    <section id="mock-message-screen">
+      <span class="eyebrow">가족에게 도착한 메시지</span>
+      <h2 class="mock-page-heading">서명 요청을 확인해 주세요</h2>
+      <div class="mock-empty" id="mock-empty"><i aria-hidden="true"></i><b>아직 도착한 메시지가 없어요</b><p>신청자가 서명을 요청하면 여기에 나타나요.</p><a class="mock-family-link" href="document-checklist.html">서류 준비에서 요청 보내기 →</a></div>
+      <article class="mock-bubble" id="mock-bubble" hidden><span class="mock-channel" id="mock-channel">카카오톡</span><p>[LH청약플러스] 신청자가 서류 서명을 요청했어요. 아래 링크에서 내용을 확인하고 서명해 주세요.</p><button type="button" id="mock-open-link">개인정보 수집·이용 동의서<br><small>서류 확인하고 서명하기 →</small></button></article>
+    </section>
+    <section id="mock-doc-screen" hidden><span class="eyebrow">서명 요청서</span><h2 class="mock-page-heading">가족관계 확인을 위한<br>서명을 부탁드려요</h2><p class="mock-muted">아래 내용을 확인하고 동의한 다음 서명해 주세요.</p><div class="mock-paper"><b>개인정보 수집·이용 동의서</b><p>LH 청약 신청을 위한 가족관계 확인 및 서명 동의</p><small>본 화면은 UX/UI 포트폴리오 시연용입니다. 실제 개인정보 제출이나 LH 신청에 사용되지 않습니다.</small></div><label class="mock-consent"><input type="checkbox" id="mock-consent"> 위 내용을 확인했으며 서명에 동의합니다.</label><button type="button" class="primary-button" id="mock-next">동의하고 서명하기</button><p class="mock-feedback" id="mock-doc-feedback" role="status" aria-live="polite"></p></section>
+    <section id="mock-sign-screen" hidden><span class="eyebrow">가족 서명</span><h2 class="mock-page-heading">서명을 남겨 주세요</h2><p class="mock-muted">아래 칸에 손가락이나 마우스로 직접 서명해 주세요.</p><div class="mock-sign-head"><b>서명하기</b><button type="button" id="mock-clear">다시 쓰기</button></div><canvas id="mock-canvas" aria-label="직접 서명하는 영역"></canvas><p class="mock-feedback" id="mock-sign-feedback" role="status" aria-live="polite"></p><button type="button" class="primary-button" id="mock-complete">서명 완료</button></section>
+    <section id="mock-done-screen" hidden><div class="mock-done-icon">✓</div><h2 class="mock-page-heading">서명이 완료됐어요</h2><p class="mock-muted">신청자의 서류 준비 화면에도 완료 상태가 반영됐어요.</p><button type="button" class="primary-button" id="mock-back">서류 준비 화면으로 돌아가기</button><button type="button" class="mock-reset mock-reset-bottom" id="mock-family-reset">다시 처음부터 시연하기 ↺</button></section>
+  </main>
+  <div id="footer"></div>
 </div>
-
-<script src="./js/app.js"></script>
 <script src="./js/footer.js"></script>
+<script src="./js/mockup-screen.js"></script>
 </body>
 </html>

@@ -1,0 +1,81 @@
+/* 목업 안의 화면만: 기존 LH 청약플러스 공통 디자인 토큰과 헤더/푸터를 재사용합니다. */
+.mobile-app:has(.mock-main){width:min(390px,100%);min-height:100dvh;padding-bottom:var(--bottom-nav-height);overflow-x:hidden}
+.mobile-app:has(.mock-main) .page-title-header{min-height:66px;padding:0 18px;background:var(--white);}
+.mobile-app:has(.mock-main) .page-title-header h1{font-size:23px;font-weight:800;color:var(--text-main);letter-spacing:-1px;}
+.mobile-app:has(.mock-main) .back-button{font-size:33px;color:var(--text-main);}
+.mock-main{padding:22px 18px 44px;color:var(--text-main);}
+.mock-main .eyebrow{font-size:11px;font-weight:800;color:var(--primary-blue)}
+.mock-page-heading{font-size:22px;font-weight:800;line-height:1.36;letter-spacing:-.8px;margin:9px 0 23px;color:var(--text-main)}
+.mock-card{border:1px solid var(--line);border-radius:20px;background:var(--white);padding:6px 16px 13px;}
+.mock-progress{display:flex;align-items:center;gap:12px;margin:20px 0 12px;}
+.mock-progress-line{height:8px;background:var(--soft-blue);flex:1;border-radius:8px;overflow:hidden}
+.mock-progress-line i{width:60%;height:100%;display:block;background:var(--primary-blue);border-radius:8px;transition:width .3s}
+.mock-progress span{font-size:11px;white-space:nowrap;color:var(--text-sub)}
+.mock-progress b{color:var(--primary-blue);font-size:13px}
+.mock-docs{list-style:none;margin:0;padding:0}
+.mock-docs>li{min-height:53px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);font-size:13px;color:var(--text-main)}
+.mock-docs>li>span{flex:1}
+.mock-docs em{font-style:normal;font-size:10px;color:var(--text-light);white-space:nowrap}
+.mock-docs li.done>span{text-decoration:line-through;color:var(--text-light)}
+.mock-check{display:flex;width:21px;height:21px;border:1.5px solid #c8d1e0;border-radius:6px;flex:0 0 21px;align-items:center;justify-content:center;font-size:15px;font-style:normal}
+.done .mock-check,.mock-need.completed .mock-check{background:var(--point-green);border-color:var(--point-green);color:var(--white)}
+.mock-docs .mock-need{display:block;border:1px solid #f7d7ae;border-radius:14px;background:var(--soft-orange);padding:13px 11px;margin:10px 0 8px}
+.mock-need-top{display:flex;gap:9px;align-items:center;font-size:12px;font-weight:800}
+.mock-need-top>span{flex:1}
+.mock-need-top em{background:var(--orange);color:#fff;padding:5px 7px;border-radius:20px;font-size:10px}
+.mock-need.completed{border-color:#cae2a4;background:var(--soft-green)}
+.mock-need.completed .mock-need-top em{background:var(--point-green)}
+.mock-need-content{padding:11px 0 0}
+.mock-main .primary-button,.mock-sheet .primary-button{height:48px;min-height:48px;border-radius:9px;background:var(--primary-blue);color:var(--white);font-size:14px;font-weight:800;font-family:inherit;cursor:pointer;border:0;width:100%;}
+.mock-main .primary-button:hover,.mock-sheet .primary-button:hover{background:var(--primary-blue-dark)}
+.mock-main .primary-button:disabled{opacity:.6;cursor:not-allowed}
+.mock-track p{margin:8px 0;font-size:11px;color:var(--text-sub)}
+.mock-track .active{color:var(--primary-blue);font-weight:800}
+.mock-track .finished{color:#628e0b;font-weight:700}
+.mock-need #mock-received{padding:10px 0}
+.mock-need #mock-received small{display:block;font-size:11px;color:var(--text-sub)}
+.mock-need #mock-received img{max-height:95px;max-width:100%;object-fit:contain}
+.mock-disclaimer{font-size:11px;color:var(--text-light);line-height:1.6;margin:16px 0}
+.mock-sheet-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.38);z-index:2000;display:flex;align-items:flex-end;justify-content:center}
+.mock-sheet-backdrop[hidden],.mock-main [hidden]{display:none!important}
+.mock-sheet{max-width:390px;width:100%;border-radius:25px 25px 0 0;padding:14px 24px 28px;background:var(--white)}
+.mock-sheet .drag-handle{margin-bottom:24px}
+.mock-sheet-heading{display:flex;align-items:center;justify-content:space-between}
+.mock-sheet h2{font-size:20px;font-weight:800;letter-spacing:-.8px;margin:0}
+.mock-sheet-heading button{background:none;border:0;font-size:30px}
+.mock-muted{font-size:12px;line-height:1.7;color:var(--text-sub)}
+.mock-methods{display:flex;background:var(--soft-blue);padding:4px;border-radius:10px;gap:4px;margin:17px 0}
+.mock-methods button{flex:1;padding:10px;border:0;border-radius:8px;font-size:13px;font-weight:700;background:transparent;color:var(--text-sub)}
+.mock-methods .selected{background:var(--white);color:var(--primary-blue);box-shadow:0 1px 5px #0001}
+.mock-message{background:var(--soft-blue);padding:14px;border-radius:12px;margin-bottom:18px}
+.mock-message small{font-size:10px;color:var(--text-sub)}
+.mock-message p{font-size:12px;line-height:1.7;margin:8px 0}
+.mock-family{min-height:calc(100dvh - 66px - 80px);background:var(--white)}
+.mock-empty{display:flex;flex-direction:column;text-align:center;align-items:center;justify-content:center;min-height:45dvh;color:var(--text-light)}
+.mock-empty i{display:block;width:54px;height:54px;background:var(--soft-blue);border-radius:50%;margin-bottom:18px}
+.mock-empty b{font-size:14px;color:var(--text-sub)}
+.mock-empty p{font-size:11px}
+.mock-bubble{margin:18px 0 0;background:var(--soft-blue);border:1px solid #d8e8f7;border-radius:14px;padding:16px;font-size:12px;line-height:1.65}
+.mock-channel{display:inline-block;padding:4px 9px;background:var(--primary-blue);border-radius:20px;color:#fff;font-size:10px;font-weight:800}
+.mock-bubble button{margin-top:12px;text-align:left;width:100%;border:1px solid #cde0f0;background:#fff;border-radius:9px;padding:13px;color:var(--primary-blue);font-size:13px;font-weight:800}
+.mock-bubble small{color:var(--text-sub);font-weight:400}
+.mock-paper{border:1px solid var(--line);background:#f7f9fc;padding:18px;margin:20px 0;border-radius:12px;font-size:13px;line-height:1.7}
+.mock-paper p{color:var(--text-sub)}
+.mock-paper small{font-size:11px;color:var(--text-light)}
+.mock-consent{display:flex;align-items:center;gap:10px;margin:25px 0;font-size:12px;line-height:1.5}
+.mock-consent input{width:18px;height:18px;accent-color:var(--primary-blue)}
+.mock-feedback{min-height:20px;color:#b5473f;font-size:12px}
+.mock-sign-head{display:flex;justify-content:space-between;align-items:center;margin:28px 0 10px;font-size:14px}
+.mock-sign-head button{background:none;border:0;color:var(--primary-blue);font-size:12px}
+#mock-canvas{display:block;width:100%;height:205px;touch-action:none;border:1px dashed #bdd0e1;background:#f7f9fc;border-radius:12px}
+.mock-done-icon{margin:65px auto 20px;background:var(--point-green);color:white;border-radius:50%;width:62px;height:62px;display:grid;place-items:center;font-size:36px}
+#mock-done-screen{text-align:center}
+#mock-done-screen .primary-button{margin-top:30px}
+@media(max-width:390px){.mock-main{padding-left:18px;padding-right:18px}}
+
+/* 포트폴리오 시연 상태를 언제든 초기화하고 모든 단계를 체험할 수 있게 합니다. */
+.mock-intro-line{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.mock-reset{border:0;background:transparent;color:var(--primary-blue);font-size:11px;font-weight:700;padding:6px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.mock-reset-bottom{display:block;margin:18px auto 0;padding:10px}
+.mock-family-link{display:block;margin:12px 0 0;color:var(--primary-blue);font-size:12px;font-weight:700;line-height:1.6;text-align:center}
+.mock-empty .mock-family-link{margin-top:16px}
